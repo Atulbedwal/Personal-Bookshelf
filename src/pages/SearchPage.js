@@ -20,11 +20,11 @@ const SearchPage = ({ onAddToBookshelf }) => {
     };
     fetchBooks();
   }, [query]);
-  
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <div className="mt-8">
+    <div className="max-w-4xl mx-auto p-4 relative">
+      <h1 className="text-2xl font-semibold mb-4 text-center">Search by book name:</h1>
+      <div className="mb-4">
         <SearchBar query={query} setQuery={setQuery} />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-8">
@@ -34,7 +34,7 @@ const SearchPage = ({ onAddToBookshelf }) => {
       </div>
       <button
         onClick={() => window.location.href='/bookshelf'}
-        className="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600"
+        className="absolute top-4 right-4 md:right-0 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600"
       >
         Go to My Bookshelf
       </button>

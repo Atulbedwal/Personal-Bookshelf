@@ -6,8 +6,9 @@ const SearchBar = ({ query, setQuery }) => {
       type="text"
       value={query}
       onChange={(e) => setQuery(e.target.value)}
-      placeholder="Search for a book..."
-      className="w-full p-2 border rounded-md"
+      placeholder="Search..."
+      className="block mx-auto w-full md:w-30 p-2 border rounded-md"
+      style={{ maxWidth: '300px' }} // Adjust the width as needed
     />
   );
 };
